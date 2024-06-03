@@ -102,8 +102,3 @@ class QueryProcessing:
 
         return removed_punctuation_query
 
-# query_text = "samll group to do play"
-# queryProcessing_instance = QueryProcessing()
-# query = queryProcessing_instance.query_processing(query_text) # Pass the query to preprocess_query func. in section preprocess query
-# print("query: ")
-# print(query)

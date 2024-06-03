@@ -114,7 +114,7 @@
 #         print(df['doc'])
 #         return df
 
-###########################################    2    ###############################################
+###########################################    6    ###############################################
 import pandas as pd
 import re #to remove stop words
 import nltk
@@ -179,4 +179,14 @@ class DataProcessing:
         # Print the updated DataFrame, See resault
         print("Data After Processing: ")
         print(df[col_name])
+        
         return df
+    
+    def save_processed_data(self, df, file_name):
+        # Generate the file name based on the input DataFrame's name
+        input_file_name = file_name.split('.')[0]
+        processed_file_name = f"{input_file_name}-processed.csv"
+        
+        # Save the processed DataFrame to a new CSV file
+        df.to_csv(processed_file_name, index=False)
+        print(f"Processed data saved to: {processed_file_name}")
